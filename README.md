@@ -1,3 +1,5 @@
+<h1 align="center">NYSiOSBootcamp</h1>
+
 # RGB App
 
 ## Week 1 Assignment: RGB App
