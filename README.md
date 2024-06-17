@@ -2,11 +2,11 @@
 
 # Xcode Playground
 
-## Week 2 Assignment: XCode PLayground
+## Week 2 Assignment: XCode Playground
 
 In this playground you wil be seeing for-in loops, arrays,  nested loops, functions, struct, and classes. 
 
-### Assigment Requirements completed
+### Assigment Requirements Completed
 
 * Create an array of Int called nums with values 0 through 20. Iterate over the array and print the even numbers.
 * In your Playground, define the following String: let sentence = “The qUIck bRown fOx jumpEd over the lAzy doG”Iterate over the sentence, counting the vowels (a, e, i, o, u), ignoring the case.
