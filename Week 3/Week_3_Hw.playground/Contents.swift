@@ -1,13 +1,11 @@
 //Part A
 
-
 var numss = Array(0...20)
 for num in numss {
     if num % 2 == 0 {
         print(num)
     }
 }
-
 
 // Overloaded functions
 func average(of numbers: [Int], dividedBy divisor: Int) -> Double {
@@ -48,12 +46,10 @@ func soundThatAnimalsmake(_ animal: Animal) {
     }
 }
 
-
 soundThatAnimalsmake(.cow)
 soundThatAnimalsmake(.dog)
 
 //Part C
-
 
 let nums = Array(0...100)
 let numsWithNil: [Int?] = [79, nil, 80, nil, 90, nil, 100, 72]
@@ -67,13 +63,11 @@ func evenNumbersArray(from numbers: [Int]) -> [Int] {
 
 print(evenNumbersArray(from: nums))
 
-
 func sumOfArray(from numbers: [Int?]) -> Int {
     return numbers.compactMap { $0 }.reduce(0, +)
 }
 
 print(sumOfArray(from: numsWithNil))
-
 
 func commonElementsSet(array1: [Int], array2: [Int]) -> Set<Int> {
     let set1 = Set(array1)
@@ -92,7 +86,6 @@ struct Square {
         return sideLength * sideLength
     }
 }
-
 
 let square = Square(sideLength: 5.0)
 print("The area of the square is \(square.area).")
