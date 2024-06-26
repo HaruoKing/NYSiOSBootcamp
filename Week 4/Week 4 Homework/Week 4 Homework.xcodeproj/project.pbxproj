@@ -11,6 +11,10 @@
 		57760CC62C2B4B6500531691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760CC52C2B4B6500531691 /* ContentView.swift */; };
 		57760CC82C2B4B6700531691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57760CC72C2B4B6700531691 /* Assets.xcassets */; };
 		57760CCB2C2B4B6700531691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57760CCA2C2B4B6700531691 /* Preview Assets.xcassets */; };
+		57760CD22C2B4C0D00531691 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760CD12C2B4C0D00531691 /* TaskModel.swift */; };
+		57760CD82C2B4CAC00531691 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760CD72C2B4CAC00531691 /* TaskStore.swift */; };
+		57760CDA2C2B4CD900531691 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760CD92C2B4CD900531691 /* AddTaskView.swift */; };
+		57760CDC2C2B4CEE00531691 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760CDB2C2B4CEE00531691 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		57760CC52C2B4B6500531691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57760CC72C2B4B6700531691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57760CCA2C2B4B6700531691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57760CD12C2B4C0D00531691 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		57760CD72C2B4CAC00531691 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		57760CD92C2B4CD900531691 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		57760CDB2C2B4CEE00531691 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,9 @@
 			children = (
 				57760CC32C2B4B6500531691 /* Week_4_HomeworkApp.swift */,
 				57760CC52C2B4B6500531691 /* ContentView.swift */,
+				57760CD62C2B4C7400531691 /* Views */,
+				57760CD52C2B4C5C00531691 /* View Models */,
+				57760CD32C2B4C1000531691 /* Model */,
 				57760CC72C2B4B6700531691 /* Assets.xcassets */,
 				57760CC92C2B4B6700531691 /* Preview Content */,
 			);
@@ -65,6 +76,31 @@
 				57760CCA2C2B4B6700531691 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57760CD32C2B4C1000531691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57760CD12C2B4C0D00531691 /* TaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57760CD52C2B4C5C00531691 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				57760CD72C2B4CAC00531691 /* TaskStore.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		57760CD62C2B4C7400531691 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57760CD92C2B4CD900531691 /* AddTaskView.swift */,
+				57760CDB2C2B4CEE00531691 /* TaskDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57760CD22C2B4C0D00531691 /* TaskModel.swift in Sources */,
+				57760CDA2C2B4CD900531691 /* AddTaskView.swift in Sources */,
+				57760CDC2C2B4CEE00531691 /* TaskDetailView.swift in Sources */,
 				57760CC62C2B4B6500531691 /* ContentView.swift in Sources */,
+				57760CD82C2B4CAC00531691 /* TaskStore.swift in Sources */,
 				57760CC42C2B4B6500531691 /* Week_4_HomeworkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
