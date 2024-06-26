@@ -4,7 +4,7 @@
 
 ## Week 4 Homework Assignment
 
-In this XCode project you will be testing out a task application list in which would have these componets: forum, NavigationTitle, NavigationStack, NavigationView, @State, @Bindings, .sheet
+In this XCode project you will be testing out a task application list in which would have these componets: form, NavigationTitle, NavigationStack, NavigationView, @State, @Bindings, .sheet
 
 ### Assigment Requirements Completed
 
