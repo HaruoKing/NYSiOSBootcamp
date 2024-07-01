@@ -23,25 +23,22 @@ struct ContentView: View {
         .padding()
         
         ScrollView {
-          ForEach(store.tasks.indices, id: \.self) { index in
-            NavigationLink(destination: TaskDetailView(task: $store.tasks[index])) {
+          ForEach($store.tasks) { $task in
+            NavigationLink(destination: TaskDetailView(task: $task)) {
               VStack {
                 HStack {
-                  Text(store.tasks[index].title)
+                  Text(task.title)
                     .foregroundColor(.blue)
                   
                   Spacer()
                   Button(action: {
-                    store.tasks[index].isCompleted.toggle()
+                    task.isCompleted.toggle()
                   }) {
-                    Image(systemName: store.tasks[index].isCompleted ? "checkmark.square.fill" : "square")
-                      .foregroundColor(store.tasks[index].isCompleted ? .green : .red)
+                    Image(systemName: task.isCompleted ? "checkmark.square.fill" : "square")
+                      .foregroundColor(task.isCompleted ? .green : .red)
                   }
                 }
                 .padding()
-                if index < store.tasks.count - 1 {
-                  Divider()
-                }
               }
             }
           }
