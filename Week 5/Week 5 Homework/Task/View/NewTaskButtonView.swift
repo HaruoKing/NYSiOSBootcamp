@@ -6,7 +6,7 @@ import SwiftUI
 
 struct NewTaskButtonView: View {
   @ObservedObject var taskStore: TaskStore
-
+  
   var body: some View {
     Button(action: {
       taskStore.addingTask.toggle()
@@ -16,7 +16,7 @@ struct NewTaskButtonView: View {
         .bold()
     })
     .sheet(isPresented: $taskStore.addingTask) {
-        AddTaskView(taskStore: taskStore)
+      AddTaskView(taskStore: taskStore)
     }
   }
 }

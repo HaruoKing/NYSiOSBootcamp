@@ -11,7 +11,7 @@ struct AddTaskView: View {
   @State private var title = ""
   @State private var notes = ""
   @State private var category = "No Category"
-
+  
   var body: some View {
     NavigationStack {
       Form {
@@ -49,7 +49,7 @@ struct AddTaskView: View {
       }
       .navigationBarTitleDisplayMode(.inline)
     }
-
+    
   }
 }
 

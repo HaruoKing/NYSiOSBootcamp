@@ -7,7 +7,7 @@ import Foundation
 class TaskStore: ObservableObject {
   @Published var tasks: [Task] = []
   @Published var addingTask = false
-
+  
   init(_ loadData: Bool = true) {
     tasks.append(Task(title: "Buy groceries", category: .home))
     tasks.append(Task(title: "Walk the dog", category: .home))
@@ -60,15 +60,15 @@ class TaskStore: ObservableObject {
     tasks.append(Task(title: "Plant new flowers in the garden", category: .home))
     tasks.append(Task(title: "Brush up on a foreign language", category: .personal, isCompleted: true))
   }
-
+  
   func addTask(title: String) {
     print("enum: \(Category.personal)")
     tasks.append(Task(title: title, category: .noCategory))
   }
-
+  
   func toggleTaskCompletion(task: Task) {
     if let index = tasks.firstIndex(where: { $0.id == task.id }) {
       tasks[index].isCompleted.toggle()
     }
   }
-                 }
+}
