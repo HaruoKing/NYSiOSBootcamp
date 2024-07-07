@@ -26,16 +26,16 @@ struct TaskRowView: View {
   }
   
   private func startAnimation() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-      showTemporaryIcon = true
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
         withAnimation(Animation.easeIn(duration: 1)) {
-          task.isCompleted.toggle()
-          showTemporaryIcon = false
+            showTemporaryIcon = true
         }
-      }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation(Animation.easeIn(duration: 2)) {
+                task.isCompleted.toggle()
+                showTemporaryIcon = false
+            }
+        }
     }
-  }
 }
 
 struct TaskRow_Previews: PreviewProvider {
