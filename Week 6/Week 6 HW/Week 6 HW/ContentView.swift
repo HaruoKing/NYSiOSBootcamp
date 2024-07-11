@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  @ObservedObject var store = APIStore()
+  
+  var body: some View {
+    NavigationView {
+      List(store.apiList?.entries ?? []) { entry in
+        NavigationLink(destination: APIDetailView(entry: entry)) {
+          Text(entry.api)
         }
-        .padding()
+      }
+      .navigationTitle("APIs")
+      .alert(isPresented: .constant(store.apiList == nil)) {
+        Alert(title: Text("Error"), message: Text("JSON file not found"), dismissButton: .default(Text("OK")))
+      }
     }
+    .onAppear {
+      store.saveData()
+    }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
