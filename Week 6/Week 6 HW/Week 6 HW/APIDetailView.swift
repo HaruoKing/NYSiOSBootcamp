@@ -5,31 +5,30 @@
 //  Created by Victor Rodriguez on 7/11/24.
 //
 
-import Foundation
 import SwiftUI
 
 struct APIDetailView: View {
   let entry: APIEntry
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 10) {
-      Text("API: \(entry.api)")
-        .font(.title)
-      Text("Description: \(entry.description)")
-      Text("Auth: \(entry.auth)")
-      Text("HTTPS: \(entry.https ? "Yes" : "No")")
-      Text("Cors: \(entry.cors)")
-      Text("Link: \(entry.link)")
-        .foregroundColor(.blue)
-        .onTapGesture {
-          if let url = URL(string: entry.link) {
-            UIApplication.shared.open(url)
-          }
+    ScrollView {
+      VStack(alignment: .leading, spacing: 20) {
+        
+        Group {
+          DetailRow(title: "Description", value: entry.description)
+          DetailRow(title: "Auth", value: entry.auth.isEmpty ? "None" : entry.auth)
+          DetailRow(title: "HTTPS", value: entry.https ? "Yes" : "No")
+          DetailRow(title: "Cors", value: entry.cors.capitalized)
+          DetailRow(title: "Category", value: entry.category)
         }
-      Text("Category: \(entry.category)")
-      Spacer()
+        
+        LinkView(link: entry.link)
+        
+        Spacer()
+      }
+      .padding()
     }
-    .padding()
     .navigationTitle(entry.api)
   }
 }
+
