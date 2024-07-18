@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct Week_7_HomeworkApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      TodoListView()
     }
+  }
 }

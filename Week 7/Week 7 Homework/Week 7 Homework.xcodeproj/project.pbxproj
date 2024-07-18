@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		572B83552C496EAD003C62B6 /* Week_7_HomeworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B83542C496EAD003C62B6 /* Week_7_HomeworkApp.swift */; };
-		572B83572C496EAD003C62B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B83562C496EAD003C62B6 /* ContentView.swift */; };
 		572B83592C496EAE003C62B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 572B83582C496EAE003C62B6 /* Assets.xcassets */; };
 		572B835C2C496EAE003C62B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 572B835B2C496EAE003C62B6 /* Preview Assets.xcassets */; };
+		572B83642C4990A0003C62B6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B83632C4990A0003C62B6 /* Todo.swift */; };
+		572B83662C4990CA003C62B6 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B83652C4990CA003C62B6 /* TodoViewModel.swift */; };
+		572B836A2C499102003C62B6 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572B83692C499102003C62B6 /* TodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		572B83512C496EAD003C62B6 /* Week 7 Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week 7 Homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		572B83542C496EAD003C62B6 /* Week_7_HomeworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week_7_HomeworkApp.swift; sourceTree = "<group>"; };
-		572B83562C496EAD003C62B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		572B83582C496EAE003C62B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		572B835B2C496EAE003C62B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		572B83632C4990A0003C62B6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		572B83652C4990CA003C62B6 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		572B83692C499102003C62B6 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				572B83542C496EAD003C62B6 /* Week_7_HomeworkApp.swift */,
-				572B83562C496EAD003C62B6 /* ContentView.swift */,
+				572B83682C4990F7003C62B6 /* View */,
+				572B83672C4990CF003C62B6 /* ViewModel */,
+				572B83622C499094003C62B6 /* Model */,
 				572B83582C496EAE003C62B6 /* Assets.xcassets */,
 				572B835A2C496EAE003C62B6 /* Preview Content */,
 			);
@@ -65,6 +71,30 @@
 				572B835B2C496EAE003C62B6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		572B83622C499094003C62B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				572B83632C4990A0003C62B6 /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		572B83672C4990CF003C62B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				572B83652C4990CA003C62B6 /* TodoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		572B83682C4990F7003C62B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				572B83692C499102003C62B6 /* TodoListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572B83572C496EAD003C62B6 /* ContentView.swift in Sources */,
+				572B83642C4990A0003C62B6 /* Todo.swift in Sources */,
+				572B836A2C499102003C62B6 /* TodoListView.swift in Sources */,
+				572B83662C4990CA003C62B6 /* TodoViewModel.swift in Sources */,
 				572B83552C496EAD003C62B6 /* Week_7_HomeworkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
