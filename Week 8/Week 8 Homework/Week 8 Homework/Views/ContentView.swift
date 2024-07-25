@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @ObservedObject var store = ImageStore()
   @State private var query: String = ""
+  let columns = [GridItem(.flexible()), GridItem(.flexible())]
   
   var body: some View {
     NavigationView {
@@ -23,14 +24,32 @@ struct ContentView: View {
         if store.photos.isEmpty {
           ContentUnavailableView(message: "No results found. Try searching for something else.")
         } else {
-          List(store.photos) { photo in
-            NavigationLink(destination: ImageDetailView(photo: photo)) {
-              Text(photo.photographer)
+          ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+              ForEach(store.photos) { photo in
+                NavigationLink(destination: ImageDetailView(photo: photo)) {
+                  VStack {
+                    AsyncImage(url: URL(string: photo.src.large2x)) { image in
+                      image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150)
+                        .clipped()
+                    } placeholder: {
+                      ProgressView()
+                        .frame(width: 150, height: 150)
+                    }
+                    Text(photo.photographer)
+                      .font(.caption)
+                      .lineLimit(1)
+                  }
+                }
+              }
             }
+            .padding()
           }
         }
       }
-      .navigationBarTitle("Pexels Photos")
+      .navigationBarTitle("Search Photos")
     }
   }
 }
