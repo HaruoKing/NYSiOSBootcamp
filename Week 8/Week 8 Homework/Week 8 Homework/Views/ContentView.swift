@@ -49,7 +49,7 @@ struct ContentView: View {
           }
         }
       }
-      .navigationBarTitle("Search Photos")
+      .navigationBarTitle("Pexels Photos")
     }
   }
 }
