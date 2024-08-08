@@ -8,20 +8,33 @@
 import Foundation
 import SwiftUI
 
+protocol NetworkServiceProtocol {
+    func fetchTodos() async throws -> [Todo]
+}
+
+struct NetworkService: NetworkServiceProtocol {
+    func fetchTodos() async throws -> [Todo] {
+        let url = URL(string: "https://jsonplaceholder.typicode.com/todos")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode([Todo].self, from: data)
+    }
+}
+
 @MainActor
 class TodoViewModel: ObservableObject {
-  @Published var todos: [Todo] = []
-  @Published var showAlert = false
-  
-  func fetchTodos() async {
-    let url = URL(string: "https://jsonplaceholder.typicode.com/todos")!
+    @Published var todos: [Todo] = []
+    @Published var showAlert = false
+    private let networkService: NetworkServiceProtocol
     
-    do {
-      let (data, _) = try await URLSession.shared.data(from: url)
-      let todos = try JSONDecoder().decode([Todo].self, from: data)
-      self.todos = todos
-    } catch {
-      showAlert = true
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
     }
-  }
+    
+    func fetchTodos() async {
+        do {
+            self.todos = try await networkService.fetchTodos()
+        } catch {
+            showAlert = true
+        }
+    }
 }
