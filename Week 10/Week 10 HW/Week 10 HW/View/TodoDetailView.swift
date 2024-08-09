@@ -27,8 +27,3 @@ struct TodoDetailView: View {
     }
 }
 
-struct TodoDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodoDetailView(todo: Todo(id: 1, title: "Sample Todo", completed: false))
-    }
-}

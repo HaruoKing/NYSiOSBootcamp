@@ -14,13 +14,11 @@ final class ToDoTest: XCTestCase {
     var mockNetworkService: MockNetworkService!
     
     @MainActor override func setUpWithError() throws {
-        
         mockNetworkService = MockNetworkService()
         viewModel = TodoViewModel(networkService: mockNetworkService)
     }
     
     override func tearDownWithError() throws {
-        
         viewModel = nil
         mockNetworkService = nil
     }
@@ -56,6 +54,12 @@ final class ToDoTest: XCTestCase {
         XCTAssertEqual(todos?.count, 2)
     }
     
+    func testTodoDetailViewData() {
+        let todo = Todo(id: 1, title: "Test Todo", completed: true)
+        
+        XCTAssertEqual(todo.title, "Test Todo")
+        XCTAssertEqual(todo.completed, true)
+    }
 }
 
 class MockNetworkService: NetworkServiceProtocol {
