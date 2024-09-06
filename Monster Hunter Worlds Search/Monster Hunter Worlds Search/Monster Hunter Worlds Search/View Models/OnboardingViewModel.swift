@@ -47,14 +47,14 @@ class OnboardingViewModel: ObservableObject {
         }
     }
     
-    private func downloadMonstersData() async throws -> [Monster] {
+    func downloadMonstersData() async throws -> [Monster] {
         let url = URL(string: "https://mhw-db.com/monsters")!
         let (data, _) = try await URLSession.shared.data(from: url)
         let monsters = try JSONDecoder().decode([Monster].self, from: data)
         return monsters
     }
     
-    private func downloadLocationsData() async throws -> [Location] {
+    func downloadLocationsData() async throws -> [Location] {
         let url = URL(string: "https://mhw-db.com/locations")!
         let (data, _) = try await URLSession.shared.data(from: url)
         let locations = try JSONDecoder().decode([Location].self, from: data)
@@ -75,7 +75,7 @@ class OnboardingViewModel: ObservableObject {
         return skills
     }
     
-    private func saveDataToPlist(monsters: [Monster]) {
+    func saveDataToPlist(monsters: [Monster]) {
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .xml
         do {
@@ -89,7 +89,7 @@ class OnboardingViewModel: ObservableObject {
         }
     }
     
-    private func saveLocationsToPlist(locations: [Location]) {
+    func saveLocationsToPlist(locations: [Location]) {
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .xml
         do {

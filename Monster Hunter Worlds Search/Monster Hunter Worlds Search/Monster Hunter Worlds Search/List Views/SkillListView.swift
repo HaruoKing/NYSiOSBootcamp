@@ -16,7 +16,7 @@ struct SkillListView: View {
                 TextField("Search Skills...", text: $viewModel.searchQuery)
                     .padding(.vertical, 10)
                     .padding(.horizontal)
-                    .background(Color(.systemGray6))
+                    .background(Color(Color.white))
                     .cornerRadius(10)
                     .padding(.horizontal)
                 

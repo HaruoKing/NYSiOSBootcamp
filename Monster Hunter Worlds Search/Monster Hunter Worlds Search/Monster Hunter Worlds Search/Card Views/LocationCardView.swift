@@ -2,7 +2,7 @@
 //  LocationCardView.swift
 //  Monster Hunter World Monster
 //
-//  Created by Victor Rodriguez on 9/3/24.
+//  Created by Victor Rodriguez on 8/28/24.
 //
 
 import SwiftUI

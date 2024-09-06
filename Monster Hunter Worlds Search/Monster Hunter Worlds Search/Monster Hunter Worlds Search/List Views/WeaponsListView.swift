@@ -2,7 +2,7 @@
 //  WeaponsView.swift
 //  Monster Hunter World Monster
 //
-//  Created by Victor Rodriguez on 8/28/24.
+//  Created by Victor Rodriguez on 8/30/24.
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct WeaponsListView: View {
                 TextField("Search Weapons...", text: $viewModel.searchQuery)
                     .padding(.vertical, 10)
                     .padding(.horizontal)
-                    .background(Color(.systemGray6))
+                    .background(Color(Color.white))
                     .cornerRadius(10)
                     .padding(.horizontal)
                 
